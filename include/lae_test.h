@@ -19,7 +19,7 @@
 
 #ifdef __cplusplus
 
-/*
+/**
  * Test macros and functions
  */
 #define TEST(test_name)                                                     \
@@ -35,7 +35,7 @@ typedef void (test_func_t)(void);
 int register_test(test_func_t* test);
 int ignore_test(test_func_t* test);
 
-/*
+/**
  * Checking functions
  */
 #define FAIL(message)   \
@@ -81,6 +81,9 @@ void check_pointer_not_null(const char* file, int line, const void* pointer);
 extern "C" { // Use C linkage
 #endif 
 
+/**
+ * Runs all registered tests and returns the number of failures
+ */
 int run_all_tests(int argc, const char* argv[]);
 
 #ifdef __cplusplus

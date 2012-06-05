@@ -11,6 +11,7 @@
 /* External headers */
 /* Internal headers */
 #include "lae_test.h"
+#include "lae_assert.h"
 /*----------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------*\
@@ -29,6 +30,6 @@ int main(int argc, const char* argv[])
         if(strcmp(argv[ii], "-t") == 0)
             return run_all_tests(argc, argv);
     }
-    
+
     return 0;
 }

@@ -14,6 +14,7 @@
 		CD2CFD0B157EAE1300F77FBF /* test_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD2CFD0A157EAE1300F77FBF /* test_system.cpp */; };
 		CD2CFD0F157EAEAD00F77FBF /* system.c in Sources */ = {isa = PBXBuildFile; fileRef = CD2CFD0E157EAEAD00F77FBF /* system.c */; };
 		CD2CFD11157EAFAB00F77FBF /* lae_config.h in Headers */ = {isa = PBXBuildFile; fileRef = CD2CFD10157EAFAB00F77FBF /* lae_config.h */; };
+		CDB3F98C157EC4FF0060E4B7 /* lae_assert.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB3F98B157EC4FF0060E4B7 /* lae_assert.h */; };
 		CDE73E70157EA91F000BE9C5 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE73E57157EA81D000BE9C5 /* liblae.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		CD2CFD0C157EAE5A00F77FBF /* lae_system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_system.h; sourceTree = "<group>"; };
 		CD2CFD0E157EAEAD00F77FBF /* system.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = system.c; path = system/system.c; sourceTree = "<group>"; };
 		CD2CFD10157EAFAB00F77FBF /* lae_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_config.h; sourceTree = "<group>"; };
+		CDB3F98B157EC4FF0060E4B7 /* lae_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_assert.h; sourceTree = "<group>"; };
 		CDE73E57157EA81D000BE9C5 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE73E5F157EA82C000BE9C5 /* lae_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lae_test; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				CD2CFD03157EAB5300F77FBF /* lae_test.h */,
 				CD2CFD0C157EAE5A00F77FBF /* lae_system.h */,
 				CD2CFD10157EAFAB00F77FBF /* lae_config.h */,
+				CDB3F98B157EC4FF0060E4B7 /* lae_assert.h */,
 			);
 			name = include;
 			path = ../include;
@@ -137,6 +140,7 @@
 			files = (
 				CD2CFD07157EAB5300F77FBF /* lae_test.h in Headers */,
 				CD2CFD11157EAFAB00F77FBF /* lae_config.h in Headers */,
+				CDB3F98C157EC4FF0060E4B7 /* lae_assert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
