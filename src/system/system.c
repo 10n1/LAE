@@ -73,7 +73,7 @@ int lae_system_get_cache_line_width(void)
     }
 
     free(buffer);
-    return line_size;
+    return (int)line_size;
 #else
     #error Implement for this system
     return 0;
