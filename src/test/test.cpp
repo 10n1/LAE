@@ -13,6 +13,7 @@
 /* C++ headers */
 /* External headers */
 /* Internal headers */
+#include "lae_config.h"
 /*----------------------------------------------------------------------------*/
 
 #if defined(__APPLE__) || defined(__GNUG__)
@@ -58,10 +59,9 @@ int register_test(test_func_t* test)
     _tests[test_id] = test;
     return test_id;
 }
-int ignore_test(test_func_t* test)
+int ignore_test(test_func_t*)
 {
     return register_test(&_ignore_test);
-    (void)sizeof(test);
 }
 
 void fail(const char* file, int line, const char* message)
@@ -159,7 +159,7 @@ void check_pointer_not_null(const char* file, int line, const void* pointer)
         fail(file,line,buffer);
     }
 }
-int run_all_tests(int argc, const char* argv[])
+int run_all_tests(int, const char*[])
 {
     for(int ii=0; ii<_num_tests; ++ii)
     {
