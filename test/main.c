@@ -22,6 +22,7 @@ External
 \*----------------------------------------------------------------------------*/
 int main(int argc, const char* argv[])
 {
+    /* Pass "-t" to the app to run the tests */
     int ii;
     for(ii=1; ii<argc; ++ii)
     {

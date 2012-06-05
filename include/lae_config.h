@@ -22,7 +22,7 @@
 extern "C" { // Use C linkage
 #endif 
 
-/*
+/**
  * Configuration detection
  */
 #if defined( DEBUG ) || defined( _DEBUG )
@@ -35,7 +35,7 @@ extern "C" { // Use C linkage
     #endif
 #endif
 
-/*
+/**
  * Platform detection
  */
 #define LAE_PLATFORM_WINDOWS 1
@@ -63,21 +63,22 @@ extern "C" { // Use C linkage
 #else
     #error No valid target found
 #endif
-/*
+
+/**
  * ISA detection
  */
 #define LAE_ISA_IA32 1
 #define LAE_ISA_ARM  2
 
 #if (LAE_PLATFORM_ID == LAE_PLATFORM_ANDROID) || (LAE_PLATFORM_ID == LAE_PLATFORM_IOS)
-    #define ISA_ID ISA_ARM
+    #define ISA_ID ISA_ARM /* TODO: Figure out a better way to detect ISA */
 #elif (LAE_PLATFORM_ID == LAE_PLATFORM_MACOS) ||\
       (LAE_PLATFORM_ID == LAE_PLATFORM_WINDOWS) || \
       (LAE_PLATFORM_ID == LAE_PLATFORM_LINUX)
     #define LAE_ISA_ID LAE_ISA_IA32
 #endif
 
-/*
+/**
  * Architecture detection
  */
 #define LAE_ARCH_64BIT 1
@@ -91,7 +92,7 @@ extern "C" { // Use C linkage
     #define LAE_ARCH_ID LAE_ARCH_32BIT
 #endif
 
-/*
+/**
  * System information
  */
 #define LAE_SYSTEM_POSIX    1
@@ -108,7 +109,7 @@ extern "C" { // Use C linkage
     #error Unsupported system
 #endif
 
-/*
+/**
  * Debug information
  */
 #if LAE_PLATFORM_ID == LAE_PLATFORM_WINDOWS

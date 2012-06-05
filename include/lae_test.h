@@ -40,7 +40,6 @@ int ignore_test(test_func_t* test);
  */
 #define FAIL(message)   \
     fail(__FILE__, __LINE__, message)
-
 void fail(const char* file, int line, const char* message);
 
 /* integer */
