@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{4f21fbd4-11df-4538-a7d1-e08d74bd35c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{f69a3bd0-428f-4bbb-8052-ced06bd1cecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\system">
+      <UniqueIdentifier>{dc352ae4-5ed7-4cec-954e-213b3393de68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\test">
+      <UniqueIdentifier>{da893af7-71b4-45da-9966-f1c6a337412c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\system\system.c">
+      <Filter>src\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\test\test.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\lae_assert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_system.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_test.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

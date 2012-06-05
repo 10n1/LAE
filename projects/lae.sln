@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lae", "lae.vcxproj", "{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lae_test", "lae_test.vcxproj", "{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2} = {B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Debug|Win32.Build.0 = Debug|Win32
+		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Release|Win32.ActiveCfg = Release|Win32
+		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Release|Win32.Build.0 = Release|Win32
+		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Debug|Win32.Build.0 = Debug|Win32
+		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Release|Win32.ActiveCfg = Release|Win32
+		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
