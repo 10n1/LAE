@@ -42,6 +42,15 @@ int ignore_test(test_func_t* test);
     fail(__FILE__, __LINE__, message)
 void fail(const char* file, int line, const char* message);
 
+/* bool */
+#define CHECK_TRUE(value) \
+    check_true(__FILE__, __LINE__, (bool)(value))
+#define CHECK_FALSE(value) \
+    check_false(__FILE__, __LINE__, (bool)(value))
+
+void check_true(const char* file, int line, bool value);
+void check_false(const char* file, int line, bool value);
+
 /* integer */
 #define CHECK_EQUAL(expected, actual) \
     check_equal(__FILE__, __LINE__, (int64_t)expected, (int64_t)actual)

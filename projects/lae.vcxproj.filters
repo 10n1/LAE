@@ -35,5 +35,8 @@
     <ClInclude Include="..\include\lae_test.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\lae_defines.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

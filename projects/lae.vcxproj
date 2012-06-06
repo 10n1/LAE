@@ -25,6 +25,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\lae_assert.h" />
     <ClInclude Include="..\include\lae_config.h" />
+    <ClInclude Include="..\include\lae_defines.h" />
     <ClInclude Include="..\include\lae_system.h" />
     <ClInclude Include="..\include\lae_test.h" />
   </ItemGroup>

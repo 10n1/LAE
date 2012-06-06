@@ -12,6 +12,7 @@
 /* External headers */
 /* Internal headers */
 #include "lae_test.h"
+#include "lae_defines.h"
 /*----------------------------------------------------------------------------*/
 
 namespace
@@ -52,6 +53,12 @@ TEST(CheckPointerEqual)
     CHECK_POINTER_NOT_EQUAL(a, c);
     CHECK_POINTER_NULL(d);
     CHECK_POINTER_NOT_NULL(a);
+}
+
+TEST(IsPointer)
+{
+    CHECK_TRUE(is_pointer<int*>::value);
+    CHECK_FALSE(is_pointer<int>::value);
 }
 
 } // anonymous namespace

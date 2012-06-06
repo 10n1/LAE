@@ -13,7 +13,7 @@
 /* C++ headers */
 /* External headers */
 /* Internal headers */
-#include "lae_config.h"
+#include "lae_defines.h"
 /*----------------------------------------------------------------------------*/
 
 #if defined(__APPLE__) || defined(__GNUG__)
@@ -59,8 +59,9 @@ int register_test(test_func_t* test)
     _tests[test_id] = test;
     return test_id;
 }
-int ignore_test(test_func_t*)
+int ignore_test(test_func_t* test)
 {
+    UNUSED_PARAMETER(test);
     return register_test(&_ignore_test);
 }
 
@@ -157,6 +158,22 @@ void check_pointer_not_null(const char* file, int line, const void* pointer)
         char buffer[256];
         sprintf(buffer, "Pointer is NULL");
         fail(file,line,buffer);
+    }
+}
+void check_true(const char* file, int line, bool value)
+{
+    if(!value)
+    {
+        char buffer[] = "False";
+        fail(file, line, buffer);
+    }
+}
+void check_false(const char* file, int line, bool value)
+{
+    if(value)
+    {
+        char buffer[] = "False";
+        fail(file, line, buffer);
     }
 }
 int run_all_tests(int, const char*[])
