@@ -106,25 +106,6 @@ static int test_func_c_lua(struct lua_State* L)
     return 1;
 }
 
-typedef struct
-{
-    int     i;
-    float   f;
-} custom_type_t;
-
-static void change_custom_type(custom_type_t* t, int i, float f)
-{
-    t->i = i;
-    t->f = f;
-}
-static int change_custom_type_lua(struct lua_State* L)
-{
-    custom_type_t* t = (custom_type_t*)lae_scripting_ptr_from_lua(L, 1);
-    int i = (int)lae_scripting_int_from_lua(L, 2);
-    float f = lae_scripting_float_from_lua(L, 3);
-    change_custom_type(t, i, f);
-    return 0;
-}
 
 TEST(ExportCFunction)
 {
@@ -146,9 +127,29 @@ TEST(LuaCallCFunction)
     CHECK_EQUAL(LAE_FLOAT, ret.type);
     CHECK_EQUAL_FLOAT(-1.3f+4.5f, ret.value.f);
 }
+
+typedef struct
+{
+    int     i;
+    float   f;
+} custom_type_t;
+
+static void change_custom_type(custom_type_t* t, int i, float f)
+{
+    t->i = i;
+    t->f = f;
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(change_custom_type)
+{
+    custom_type_t* t = (custom_type_t*)lae_scripting_ptr_from_lua(L, 1);
+    int i = (int)lae_scripting_int_from_lua(L, 2);
+    float f = lae_scripting_float_from_lua(L, 3);
+    change_custom_type(t, i, f);
+    return 0;
+}
 TEST(UseCustomType)
 {
-    lae_scripting_export_function(g_scripting, "change_custom_type", change_custom_type_lua);
+    lae_scripting_export_function_named(g_scripting, change_custom_type);
     custom_type_t type = { -345, 987.65f };
     CHECK_EQUAL(-345, type.i);
     CHECK_EQUAL_FLOAT(987.65f, type.f);

@@ -54,7 +54,7 @@ typedef struct
 lae_scripting_t* lae_scripting_create(void);
 
 /**
- * Tears down the scripting interface and clears the memory
+ * Tears down the scripting interface and frees the memory
  */
 void lae_scripting_destroy(lae_scripting_t* script);
 
@@ -69,8 +69,7 @@ void lae_scripting_print_error(lae_scripting_t* scripting);
 int lae_scripting_run(lae_scripting_t* scripting, const char* script);
 
 /**
- * Validates (compiles) a script.
- * Doesn't try to run the compiled script
+ * Validates a script without running it
  */
 int lae_scripting_validate(lae_scripting_t* scripting, const char* script);
 
@@ -105,6 +104,15 @@ void lae_scripting_float_to_lua(struct lua_State* L, float value);
 void lae_scripting_string_to_lua(struct lua_State* L, const char* value);
 void lae_scripting_int_to_lua(struct lua_State* L, intptr_t value);
 void lae_scripting_ptr_to_lua(struct lua_State* L, void* value);
+
+/**
+ * Helper macros to make exporting functions slightly easier
+ */
+#define LAE_SCRIPTING_EXPORT_FUNCTION(func_name) \
+    static int func_name##__lua(struct lua_State* L)
+    
+#define lae_scripting_export_function_named(scripting, function) \
+    lae_scripting_export_function(scripting, #function, function##__lua)
  
 #ifdef __cplusplus
 }
