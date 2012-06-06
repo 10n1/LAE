@@ -47,7 +47,7 @@ TEST(InitializeShutdownScripting)
 }
 TEST(HelloWorld)
 {
-    const char lua_hello_world[] = "print(\"Hello world!\")";
+    const char lua_hello_world[] = "local x = 1";
     int result = lae_scripting_run(g_scripting, lua_hello_world);
     CHECK_FALSE(result);
 }

@@ -44,12 +44,12 @@ void fail(const char* file, int line, const char* message);
 
 /* bool */
 #define CHECK_TRUE(value) \
-    check_true(__FILE__, __LINE__, (bool)(value))
+    check_true(__FILE__, __LINE__, (int)(value))
 #define CHECK_FALSE(value) \
-    check_false(__FILE__, __LINE__, (bool)(value))
+    check_false(__FILE__, __LINE__, (int)(value))
 
-void check_true(const char* file, int line, bool value);
-void check_false(const char* file, int line, bool value);
+void check_true(const char* file, int line, int value);
+void check_false(const char* file, int line, int value);
 
 /* integer */
 #define CHECK_EQUAL(expected, actual) \

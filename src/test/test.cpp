@@ -160,7 +160,7 @@ void check_pointer_not_null(const char* file, int line, const void* pointer)
         fail(file,line,buffer);
     }
 }
-void check_true(const char* file, int line, bool value)
+void check_true(const char* file, int line, int value)
 {
     if(!value)
     {
@@ -168,7 +168,7 @@ void check_true(const char* file, int line, bool value)
         fail(file, line, buffer);
     }
 }
-void check_false(const char* file, int line, bool value)
+void check_false(const char* file, int line, int value)
 {
     if(value)
     {
@@ -261,7 +261,7 @@ int run_all_tests(int, const char*[])
         case eIgnore: _num_tests_ignored++; printf("!"); break;
         }
     }
-    printf("\n--------------------------------------\n");
+    printf("\n----------------------------------------\n");
     printf("%d failed, %d passed, %d ignored, %d total\n", 
             _num_tests_failed, _num_tests_passed, _num_tests_ignored, _num_tests);
     return _num_tests_failed;
