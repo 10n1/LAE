@@ -425,10 +425,10 @@
 		CD9FBDC5157FD34900638766 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "lae_osx/lae_osx-Prefix.pch";
-				INFOPLIST_FILE = "lae_osx/lae_osx-Info.plist";
+				GCC_C_LANGUAGE_STANDARD = c89;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "../src/macosx/lae_osx-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,10 +437,10 @@
 		CD9FBDC6157FD34900638766 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "lae_osx/lae_osx-Prefix.pch";
-				INFOPLIST_FILE = "lae_osx/lae_osx-Info.plist";
+				GCC_C_LANGUAGE_STANDARD = c89;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "../src/macosx/lae_osx-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -583,6 +583,7 @@
 				CD9FBDC6157FD34900638766 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDE73E3B157EA786000BE9C5 /* Build configuration list for PBXProject "lae" */ = {
 			isa = XCConfigurationList;
