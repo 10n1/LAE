@@ -23,6 +23,12 @@
 		CD03F0F9157F16E30087081C /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03F0F8157F16E30087081C /* liblua.a */; };
 		CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */; };
 		CD7AE300157F3B16009CD9D3 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD7AE2FF157F3B16009CD9D3 /* timer.c */; };
+		CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9FBDAD157FD34900638766 /* Cocoa.framework */; };
+		CD9FBDD4157FD35800638766 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FBDCB157FD35800638766 /* AppDelegate.m */; };
+		CD9FBDD5157FD35800638766 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD9FBDCC157FD35800638766 /* Credits.rtf */; };
+		CD9FBDD6157FD35800638766 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD9FBDCE157FD35800638766 /* InfoPlist.strings */; };
+		CD9FBDD7157FD35800638766 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9FBDD0157FD35800638766 /* MainMenu.xib */; };
+		CD9FBDD9157FD35800638766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FBDD3157FD35800638766 /* main.m */; };
 		CDE73E70157EA91F000BE9C5 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE73E57157EA81D000BE9C5 /* liblae.a */; };
 /* End PBXBuildFile section */
 
@@ -55,11 +61,31 @@
 		CD03F0F8157F16E30087081C /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "../external/lua-5.2.0/src/liblua.a"; sourceTree = "<group>"; };
 		CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_timer.h; sourceTree = "<group>"; };
 		CD7AE2FF157F3B16009CD9D3 /* timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
+		CD9FBDAA157FD34900638766 /* lae_osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lae_osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9FBDAD157FD34900638766 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CD9FBDB0157FD34900638766 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CD9FBDB1157FD34900638766 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CD9FBDB2157FD34900638766 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CD9FBDCA157FD35800638766 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD9FBDCB157FD35800638766 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD9FBDCD157FD35800638766 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CD9FBDCF157FD35800638766 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD9FBDD1157FD35800638766 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "lae_osx-Info.plist"; sourceTree = "<group>"; };
+		CD9FBDD3157FD35800638766 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDE73E57157EA81D000BE9C5 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE73E5F157EA82C000BE9C5 /* lae_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lae_test; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD9FBDA7157FD34800638766 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDE73E54157EA81D000BE9C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +123,7 @@
 		CD03F0DF157F16740087081C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CD9FBDC9157FD35800638766 /* macosx */,
 				CD7AE2FE157F3B0C009CD9D3 /* utility */,
 				CD03F0E0157F16740087081C /* scripting */,
 				CD03F0E2157F16740087081C /* system */,
@@ -150,6 +177,39 @@
 			path = utility;
 			sourceTree = "<group>";
 		};
+		CD9FBDAC157FD34900638766 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FBDAD157FD34900638766 /* Cocoa.framework */,
+				CD9FBDAF157FD34900638766 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD9FBDAF157FD34900638766 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FBDB0157FD34900638766 /* AppKit.framework */,
+				CD9FBDB1157FD34900638766 /* CoreData.framework */,
+				CD9FBDB2157FD34900638766 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CD9FBDC9157FD35800638766 /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FBDCA157FD35800638766 /* AppDelegate.h */,
+				CD9FBDCB157FD35800638766 /* AppDelegate.m */,
+				CD9FBDCC157FD35800638766 /* Credits.rtf */,
+				CD9FBDCE157FD35800638766 /* InfoPlist.strings */,
+				CD9FBDD0157FD35800638766 /* MainMenu.xib */,
+				CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */,
+				CD9FBDD3157FD35800638766 /* main.m */,
+			);
+			path = macosx;
+			sourceTree = "<group>";
+		};
 		CDE73E36157EA786000BE9C5 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +217,7 @@
 				CD03F0EF157F167B0087081C /* test */,
 				CD03F0D8157F16740087081C /* include */,
 				CD03F0DF157F16740087081C /* src */,
+				CD9FBDAC157FD34900638766 /* Frameworks */,
 				CDE73E42157EA786000BE9C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +227,7 @@
 			children = (
 				CDE73E57157EA81D000BE9C5 /* liblae.a */,
 				CDE73E5F157EA82C000BE9C5 /* lae_test */,
+				CD9FBDAA157FD34900638766 /* lae_osx.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +252,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CD9FBDA9157FD34800638766 /* lae_osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD9FBDC7157FD34900638766 /* Build configuration list for PBXNativeTarget "lae_osx" */;
+			buildPhases = (
+				CD9FBDA6157FD34800638766 /* Sources */,
+				CD9FBDA7157FD34800638766 /* Frameworks */,
+				CD9FBDA8157FD34800638766 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lae_osx;
+			productName = lae_osx;
+			productReference = CD9FBDAA157FD34900638766 /* lae_osx.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CDE73E56157EA81D000BE9C5 /* lae */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDE73E58157EA81D000BE9C5 /* Build configuration list for PBXNativeTarget "lae" */;
@@ -247,9 +326,23 @@
 			targets = (
 				CDE73E56157EA81D000BE9C5 /* lae */,
 				CDE73E5E157EA82C000BE9C5 /* lae_test */,
+				CD9FBDA9157FD34800638766 /* lae_osx */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD9FBDA8157FD34800638766 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9FBDD5157FD35800638766 /* Credits.rtf in Resources */,
+				CD9FBDD6157FD35800638766 /* InfoPlist.strings in Resources */,
+				CD9FBDD7157FD35800638766 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		CD2CFD09157EABB200F77FBF /* ShellScript */ = {
@@ -268,6 +361,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD9FBDA6157FD34800638766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9FBDD4157FD35800638766 /* AppDelegate.m in Sources */,
+				CD9FBDD9157FD35800638766 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDE73E53157EA81D000BE9C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,7 +394,58 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		CD9FBDCC157FD35800638766 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD9FBDCD157FD35800638766 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CD9FBDCE157FD35800638766 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD9FBDCF157FD35800638766 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CD9FBDD0157FD35800638766 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD9FBDD1157FD35800638766 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		CD9FBDC5157FD34900638766 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lae_osx/lae_osx-Prefix.pch";
+				INFOPLIST_FILE = "lae_osx/lae_osx-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CD9FBDC6157FD34900638766 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lae_osx/lae_osx-Prefix.pch";
+				INFOPLIST_FILE = "lae_osx/lae_osx-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		CDE73E49157EA786000BE9C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -423,6 +576,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD9FBDC7157FD34900638766 /* Build configuration list for PBXNativeTarget "lae_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9FBDC5157FD34900638766 /* Debug */,
+				CD9FBDC6157FD34900638766 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CDE73E3B157EA786000BE9C5 /* Build configuration list for PBXProject "lae" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
