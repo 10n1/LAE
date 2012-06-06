@@ -35,7 +35,7 @@ void lae_timer_init(lae_timer_t* timer)
 }
 void lae_timer_reset(lae_timer_t* timer)
 {
-    lae_timer_init(timer);
+    timer->startTime = timer->prevTime = mach_absolute_time();
 }
 double lae_timer_delta_time(lae_timer_t* timer)
 {

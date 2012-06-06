@@ -26,9 +26,25 @@ typedef struct
 extern "C" { // Use C linkage
 #endif 
 
+/**
+ * Initializes the timer and its frequency
+ */
 void lae_timer_init(lae_timer_t* timer);
+
+/**
+ * Resets the timer to count from zero
+ */
 void lae_timer_reset(lae_timer_t* timer);
+
+/**
+ * Returns the time that has passed (in seconds)
+ * since the last call to lae_timer_delta_time
+ */
 double lae_timer_delta_time(lae_timer_t* timer);
+
+/**
+ * Returns the time in seconds since the last call to init or reset
+ */
 double lae_timer_running_time(lae_timer_t* timer);
 
 #ifdef __cplusplus
