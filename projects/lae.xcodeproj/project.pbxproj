@@ -21,6 +21,14 @@
 		CD03F0F6157F167B0087081C /* test_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03F0F2157F167B0087081C /* test_system.cpp */; };
 		CD03F0F7157F167B0087081C /* test_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03F0F3157F167B0087081C /* test_test.cpp */; };
 		CD03F0F9157F16E30087081C /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03F0F8157F16E30087081C /* liblua.a */; };
+		CD1A2437157FEA35003FE80F /* lae_cocoa_view.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */; };
+		CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A2439157FECE4003FE80F /* lae_graphics.h */; };
+		CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */ = {isa = PBXBuildFile; fileRef = CD1A243C157FEDA5003FE80F /* graphics_opengl.c */; };
+		CD1A243E157FEDE5003FE80F /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE73E57157EA81D000BE9C5 /* liblae.a */; };
+		CD1A2440157FF8D7003FE80F /* graphics_opengl.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A243F157FF8D7003FE80F /* graphics_opengl.h */; };
+		CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */; };
+		CD1A244415800C7A003FE80F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A244315800C7A003FE80F /* CoreVideo.framework */; };
+		CD1A244615800C7F003FE80F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A244515800C7F003FE80F /* OpenGL.framework */; };
 		CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */; };
 		CD7AE300157F3B16009CD9D3 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD7AE2FF157F3B16009CD9D3 /* timer.c */; };
 		CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9FBDAD157FD34900638766 /* Cocoa.framework */; };
@@ -59,6 +67,14 @@
 		CD03F0F2157F167B0087081C /* test_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_system.cpp; sourceTree = "<group>"; };
 		CD03F0F3157F167B0087081C /* test_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_test.cpp; sourceTree = "<group>"; };
 		CD03F0F8157F16E30087081C /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "../external/lua-5.2.0/src/liblua.a"; sourceTree = "<group>"; };
+		CD1A2435157FEA35003FE80F /* lae_cocoa_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_cocoa_view.h; sourceTree = "<group>"; };
+		CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lae_cocoa_view.m; sourceTree = "<group>"; };
+		CD1A2439157FECE4003FE80F /* lae_graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_graphics.h; sourceTree = "<group>"; };
+		CD1A243C157FEDA5003FE80F /* graphics_opengl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = graphics_opengl.c; sourceTree = "<group>"; };
+		CD1A243F157FF8D7003FE80F /* graphics_opengl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_opengl.h; sourceTree = "<group>"; };
+		CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graphics_opengl_macosx.m; sourceTree = "<group>"; };
+		CD1A244315800C7A003FE80F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CD1A244515800C7F003FE80F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_timer.h; sourceTree = "<group>"; };
 		CD7AE2FF157F3B16009CD9D3 /* timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
 		CD9FBDAA157FD34900638766 /* lae_osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lae_osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1A244615800C7F003FE80F /* OpenGL.framework in Frameworks */,
+				CD1A244415800C7A003FE80F /* CoreVideo.framework in Frameworks */,
+				CD1A243E157FEDE5003FE80F /* liblae.a in Frameworks */,
 				CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +134,7 @@
 				CD03F0DD157F16740087081C /* lae_system.h */,
 				CD03F0DE157F16740087081C /* lae_test.h */,
 				CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */,
+				CD1A2439157FECE4003FE80F /* lae_graphics.h */,
 			);
 			name = include;
 			path = ../include;
@@ -123,6 +143,7 @@
 		CD03F0DF157F16740087081C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A243B157FED97003FE80F /* graphics */,
 				CD9FBDC9157FD35800638766 /* macosx */,
 				CD7AE2FE157F3B0C009CD9D3 /* utility */,
 				CD03F0E0157F16740087081C /* scripting */,
@@ -169,6 +190,16 @@
 			path = ../test;
 			sourceTree = "<group>";
 		};
+		CD1A243B157FED97003FE80F /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				CD1A243C157FEDA5003FE80F /* graphics_opengl.c */,
+				CD1A243F157FF8D7003FE80F /* graphics_opengl.h */,
+				CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */,
+			);
+			path = graphics;
+			sourceTree = "<group>";
+		};
 		CD7AE2FE157F3B0C009CD9D3 /* utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +211,9 @@
 		CD9FBDAC157FD34900638766 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A244515800C7F003FE80F /* OpenGL.framework */,
+				CD1A244315800C7A003FE80F /* CoreVideo.framework */,
+				CD03F0F8157F16E30087081C /* liblua.a */,
 				CD9FBDAD157FD34900638766 /* Cocoa.framework */,
 				CD9FBDAF157FD34900638766 /* Other Frameworks */,
 			);
@@ -206,6 +240,8 @@
 				CD9FBDD0157FD35800638766 /* MainMenu.xib */,
 				CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */,
 				CD9FBDD3157FD35800638766 /* main.m */,
+				CD1A2435157FEA35003FE80F /* lae_cocoa_view.h */,
+				CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */,
 			);
 			path = macosx;
 			sourceTree = "<group>";
@@ -213,7 +249,6 @@
 		CDE73E36157EA786000BE9C5 = {
 			isa = PBXGroup;
 			children = (
-				CD03F0F8157F16E30087081C /* liblua.a */,
 				CD03F0EF157F167B0087081C /* test */,
 				CD03F0D8157F16740087081C /* include */,
 				CD03F0DF157F16740087081C /* src */,
@@ -246,6 +281,8 @@
 				CD03F0EA157F16740087081C /* lae_system.h in Headers */,
 				CD03F0EB157F16740087081C /* lae_test.h in Headers */,
 				CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */,
+				CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */,
+				CD1A2440157FF8D7003FE80F /* graphics_opengl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +404,7 @@
 			files = (
 				CD9FBDD4157FD35800638766 /* AppDelegate.m in Sources */,
 				CD9FBDD9157FD35800638766 /* main.m in Sources */,
+				CD1A2437157FEA35003FE80F /* lae_cocoa_view.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +416,8 @@
 				CD03F0ED157F16740087081C /* system.c in Sources */,
 				CD03F0EE157F16740087081C /* test.cpp in Sources */,
 				CD7AE300157F3B16009CD9D3 /* timer.c in Sources */,
+				CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */,
+				CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
