@@ -189,6 +189,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\test\main.c" />
+    <ClCompile Include="..\test\test_scripting.cpp" />
     <ClCompile Include="..\test\test_system.cpp" />
     <ClCompile Include="..\test\test_test.cpp" />
   </ItemGroup>

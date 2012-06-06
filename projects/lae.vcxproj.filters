@@ -13,6 +13,9 @@
     <Filter Include="src\test">
       <UniqueIdentifier>{da893af7-71b4-45da-9966-f1c6a337412c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\scripting">
+      <UniqueIdentifier>{65beed06-f1eb-41f0-935a-2ecf57b1c8c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\system\system.c">
@@ -20,6 +23,9 @@
     </ClCompile>
     <ClCompile Include="..\src\test\test.cpp">
       <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scripting\scripting.c">
+      <Filter>src\scripting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +42,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\lae_defines.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_scripting.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
