@@ -172,8 +172,80 @@ void check_false(const char* file, int line, bool value)
 {
     if(value)
     {
-        char buffer[] = "False";
+        char buffer[] = "True";
         fail(file, line, buffer);
+    }
+}
+void check_equal_float(const char* file, int line, double expected, double actual)
+{
+    if(expected != actual)
+    {
+        char buffer[256];
+        sprintf(buffer, "Expected: %f  Actual: %f", expected, actual);
+        fail(file,line,buffer);
+    }
+}
+void check_not_equal_float(const char* file, int line, double expected, double actual)
+{
+    if(expected == actual)
+    {
+        char buffer[256];
+        sprintf(buffer, "Actual value equals expected: %f", actual);
+        fail(file,line,buffer);
+    }
+}
+void check_less_than_float(const char* file, int line, double left, double right)
+{
+    if(left >= right)
+    {
+        char buffer[256];
+        sprintf(buffer, "%f is not less than %f", left, right);
+        fail(file,line,buffer);
+    }
+}
+void check_greater_than_float(const char* file, int line, double left, double right)
+{
+    if(left <= right)
+    {
+        char buffer[256];
+        sprintf(buffer, "%f is not greater than %f", left, right);
+        fail(file,line,buffer);
+    }
+}
+void check_less_than_equal_float(const char* file, int line, double left, double right)
+{
+    if(left > right)
+    {
+        char buffer[256];
+        sprintf(buffer, "%f is not less than %f", left, right);
+        fail(file,line,buffer);
+    }
+}
+void check_greater_than_equal_float(const char* file, int line, double left, double right)
+{
+    if(left < right)
+    {
+        char buffer[256];
+        sprintf(buffer, "%f is not greater than %f", left, right);
+        fail(file,line,buffer);
+    }
+}
+void check_equal_string(const char* file, int line, const char* expected, const char* actual)
+{
+    if(strcmp(expected, actual) != 0)
+    {
+        char buffer[256];
+        sprintf(buffer, "Expected: %s  Actual: %s", expected, actual);
+        fail(file,line,buffer);        
+    }
+}
+void check_not_equal_string(const char* file, int line, const char* expected, const char* actual)
+{
+    if(strcmp(expected, actual) == 0)
+    {
+        char buffer[256];
+        sprintf(buffer, "Strings are equal: %s", actual);
+        fail(file,line,buffer);        
     }
 }
 int run_all_tests(int, const char*[])

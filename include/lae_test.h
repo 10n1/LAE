@@ -87,6 +87,37 @@ void check_pointer_not_equal(const char* file, int line, const void* expected, c
 void check_pointer_null(const char* file, int line, const void* pointer);
 void check_pointer_not_null(const char* file, int line, const void* pointer);
 
+/* float */
+#define CHECK_EQUAL_FLOAT(expected, actual) \
+    check_equal_float(__FILE__, __LINE__, (double)expected, (double)actual)
+#define CHECK_NOT_EQUAL_FLOAT(expected, actual) \
+    check_not_equal_float(__FILE__, __LINE__, (double)expected, (double)actual)
+#define CHECK_LESS_THAN_FLOAT(left, right) \
+    check_less_than_float(__FILE__, __LINE__, (double)left, (double)right)
+#define CHECK_GREATER_THAN_FLOAT(left, right) \
+    check_greater_than_float(__FILE__, __LINE__, (double)left, (double)right)
+#define CHECK_LESS_THAN_EQUAL_FLOAT(left, right) \
+    check_less_than_equal_float(__FILE__, __LINE__, (double)left, (double)right)
+#define CHECK_GREATER_THAN_EQUAL_FLOAT(left, right) \
+    check_greater_than_equal_float(__FILE__, __LINE__, (double)left, (double)right)
+    
+void check_equal_float(const char* file, int line, double expected, double actual);
+void check_not_equal_float(const char* file, int line, double expected, double actual);
+void check_less_than_float(const char* file, int line, double left, double right);
+void check_greater_than_float(const char* file, int line, double left, double right);
+void check_less_than_equal_float(const char* file, int line, double left, double right);
+void check_greater_than_equal_float(const char* file, int line, double left, double right);
+
+/* string */
+#define CHECK_EQUAL_STRING(expected, actual) \
+    check_equal_string(__FILE__, __LINE__, expected, actual)
+#define CHECK_NOT_EQUAL_STRING(expected, actual) \
+    check_not_equal_string(__FILE__, __LINE__, expected, actual)
+    
+void check_equal_string(const char* file, int line, const char* expected, const char* actual);
+void check_not_equal_string(const char* file, int line, const char* expected, const char* actual);
+
+
 extern "C" { // Use C linkage
 #endif 
 
