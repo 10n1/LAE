@@ -16,6 +16,9 @@
     <Filter Include="src\scripting">
       <UniqueIdentifier>{65beed06-f1eb-41f0-935a-2ecf57b1c8c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\utility">
+      <UniqueIdentifier>{ddc41adf-d231-4af4-9ce0-21c04f268843}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\system\system.c">
@@ -26,6 +29,9 @@
     </ClCompile>
     <ClCompile Include="..\src\scripting\scripting.c">
       <Filter>src\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utility\timer.c">
+      <Filter>src\utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +51,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\lae_scripting.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_timer.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

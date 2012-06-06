@@ -11,7 +11,6 @@
 /*----------------------------------------------------------------------------*/
 /* C headers */
 #ifdef _WIN32
-    #define WIN32_LEAN_AND_MEAN 1
     #include <windows.h>
 #elif defined(__APPLE__)
     #include <mach/mach_time.h>

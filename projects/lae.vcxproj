@@ -22,6 +22,7 @@
     <ClCompile Include="..\src\scripting\scripting.c" />
     <ClCompile Include="..\src\system\system.c" />
     <ClCompile Include="..\src\test\test.cpp" />
+    <ClCompile Include="..\src\utility\timer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\lae_assert.h" />
@@ -30,6 +31,7 @@
     <ClInclude Include="..\include\lae_scripting.h" />
     <ClInclude Include="..\include\lae_system.h" />
     <ClInclude Include="..\include\lae_test.h" />
+    <ClInclude Include="..\include\lae_timer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
