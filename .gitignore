@@ -5,6 +5,8 @@
 .DS_Store
 bin/lae_test
 obj/
+external/lua-5.2.0/src/lua
+external/lua-5.2.0/src/luac
 *.xcbkptlist
 *.xcuserstate
 *.lik

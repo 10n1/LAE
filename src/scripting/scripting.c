@@ -33,6 +33,7 @@ lae_scripting_t* lae_scripting_create(void)
 {
     lae_scripting_t* scripting = (lae_scripting_t*)malloc(sizeof(*scripting));
     assert(scripting);
+    if(scripting == NULL) { return NULL; }
 
     { /* Initialize Lua */
         scripting->lua = luaL_newstate();
