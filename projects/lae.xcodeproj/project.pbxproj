@@ -29,6 +29,9 @@
 		CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */; };
 		CD1A244415800C7A003FE80F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A244315800C7A003FE80F /* CoreVideo.framework */; };
 		CD1A244615800C7F003FE80F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A244515800C7F003FE80F /* OpenGL.framework */; };
+		CD1A2448158080B8003FE80F /* test_core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2447158080B8003FE80F /* test_core.cpp */; };
+		CD1A244A158080CA003FE80F /* lae_core.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A2449158080CA003FE80F /* lae_core.h */; };
+		CD1A244D15808108003FE80F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = CD1A244C15808108003FE80F /* core.c */; };
 		CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */; };
 		CD7AE300157F3B16009CD9D3 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD7AE2FF157F3B16009CD9D3 /* timer.c */; };
 		CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9FBDAD157FD34900638766 /* Cocoa.framework */; };
@@ -75,6 +78,9 @@
 		CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graphics_opengl_macosx.m; sourceTree = "<group>"; };
 		CD1A244315800C7A003FE80F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		CD1A244515800C7F003FE80F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CD1A2447158080B8003FE80F /* test_core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_core.cpp; sourceTree = "<group>"; };
+		CD1A2449158080CA003FE80F /* lae_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_core.h; sourceTree = "<group>"; };
+		CD1A244C15808108003FE80F /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = core.c; path = core/core.c; sourceTree = "<group>"; };
 		CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_timer.h; sourceTree = "<group>"; };
 		CD7AE2FF157F3B16009CD9D3 /* timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
 		CD9FBDAA157FD34900638766 /* lae_osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lae_osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,7 @@
 				CD03F0DE157F16740087081C /* lae_test.h */,
 				CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */,
 				CD1A2439157FECE4003FE80F /* lae_graphics.h */,
+				CD1A2449158080CA003FE80F /* lae_core.h */,
 			);
 			name = include;
 			path = ../include;
@@ -143,6 +150,7 @@
 		CD03F0DF157F16740087081C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A244B158080FC003FE80F /* core */,
 				CD1A243B157FED97003FE80F /* graphics */,
 				CD9FBDC9157FD35800638766 /* macosx */,
 				CD7AE2FE157F3B0C009CD9D3 /* utility */,
@@ -181,6 +189,7 @@
 		CD03F0EF157F167B0087081C /* test */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A2447158080B8003FE80F /* test_core.cpp */,
 				CD03F0F0157F167B0087081C /* main.c */,
 				CD03F0F1157F167B0087081C /* test_scripting.cpp */,
 				CD03F0F2157F167B0087081C /* test_system.cpp */,
@@ -198,6 +207,14 @@
 				CD1A2441157FFD53003FE80F /* graphics_opengl_macosx.m */,
 			);
 			path = graphics;
+			sourceTree = "<group>";
+		};
+		CD1A244B158080FC003FE80F /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CD1A244C15808108003FE80F /* core.c */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 		CD7AE2FE157F3B0C009CD9D3 /* utility */ = {
@@ -283,6 +300,7 @@
 				CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */,
 				CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */,
 				CD1A2440157FF8D7003FE80F /* graphics_opengl.h in Headers */,
+				CD1A244A158080CA003FE80F /* lae_core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,7 @@
 				CD7AE300157F3B16009CD9D3 /* timer.c in Sources */,
 				CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */,
 				CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */,
+				CD1A244D15808108003FE80F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +448,7 @@
 				CD03F0F5157F167B0087081C /* test_scripting.cpp in Sources */,
 				CD03F0F6157F167B0087081C /* test_system.cpp in Sources */,
 				CD03F0F7157F167B0087081C /* test_test.cpp in Sources */,
+				CD1A2448158080B8003FE80F /* test_core.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
