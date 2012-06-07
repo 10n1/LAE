@@ -17,6 +17,7 @@
 #endif
 /* External headers */
 /* Internal headers */
+#include "lae_scripting.h"
 /*----------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------*\
@@ -85,6 +86,46 @@ double lae_timer_running_time(lae_timer_t* timer)
     running_time = (current_time - timer->startTime) * timer->frequency;
     return running_time; 
 }
+
 #else
     #error Need a timer!
 #endif /* platform */
+
+LAE_SCRIPTING_EXPORT_FUNCTION(lae_timer_init)
+{
+    lae_timer_t* timer = lae_scripting_ptr_from_lua(L, 1);
+    lae_timer_init(timer);
+    return 0;
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(lae_timer_reset)
+{
+    lae_timer_t* timer = lae_scripting_ptr_from_lua(L, 1);
+    lae_timer_reset(timer);
+    return 0;
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(lae_timer_delta_time)
+{
+    lae_timer_t* timer = lae_scripting_ptr_from_lua(L, 1);
+    lae_scripting_float_to_lua(L, (float)lae_timer_delta_time(timer));
+    return 1;
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(lae_timer_running_time)
+{
+    lae_timer_t* timer = lae_scripting_ptr_from_lua(L, 1);
+    lae_scripting_float_to_lua(L, (float)lae_timer_delta_time(timer));
+    return 1;
+}
+
+void lae_timer_export(struct lae_scripting_t* scripting)
+{
+    static const lae_scripting_function_t timer_functions[] =
+    {
+        LAE_SCRIPTING_FUNCTION(lae_timer_init),
+        LAE_SCRIPTING_FUNCTION(lae_timer_reset),
+        LAE_SCRIPTING_FUNCTION(lae_timer_delta_time),
+        LAE_SCRIPTING_FUNCTION(lae_timer_running_time),
+        { NULL, NULL }
+    };
+    lae_scripting_export_functions(scripting, timer_functions);
+}
+

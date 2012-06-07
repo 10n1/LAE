@@ -13,6 +13,7 @@
 /* Internal headers */
 #include "lae_test.h"
 #include "lae_scripting.h"
+#include "lae_defines.h"
 /*----------------------------------------------------------------------------*/
 
 /*
@@ -234,6 +235,63 @@ TEST(ValidateScript)
     script_buffer[7] = 'a';
     result = lae_scripting_validate(g_scripting, script_buffer);
     CHECK_EQUAL(1, result);
+}
+void c_func_0(void)
+{
+}
+void c_func_1(void)
+{
+}
+void c_func_2(void)
+{
+}
+void c_func_3(void)
+{
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(c_func_0)
+{
+    c_func_0();
+    return 0;
+    UNUSED_PARAMETER(L);
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(c_func_1)
+{
+    c_func_1();
+    return 0;
+    UNUSED_PARAMETER(L);
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(c_func_2)
+{
+    c_func_2();
+    return 0;
+    UNUSED_PARAMETER(L);
+}
+LAE_SCRIPTING_EXPORT_FUNCTION(c_func_3)
+{
+    c_func_3();
+    return 0;
+    UNUSED_PARAMETER(L);
+}
+TEST(ExportMultipleFunctions)
+{
+    lae_scripting_function_t functions[] =
+    {
+        LAE_SCRIPTING_FUNCTION(c_func_0),
+        LAE_SCRIPTING_FUNCTION(c_func_1),
+        LAE_SCRIPTING_FUNCTION(c_func_2),
+        LAE_SCRIPTING_FUNCTION(c_func_3),
+        { NULL, 0 }
+    };
+    int result = lae_scripting_export_functions(g_scripting, functions);
+    CHECK_FALSE(result);
+    result = lae_scripting_call_function(g_scripting, "c_func_0", NULL, NULL);
+    CHECK_FALSE(result);
+    result = lae_scripting_call_function(g_scripting, "c_func_1", NULL, NULL);
+    CHECK_FALSE(result);
+    result = lae_scripting_call_function(g_scripting, "c_func_2", NULL, NULL);
+    CHECK_FALSE(result);
+    result = lae_scripting_call_function(g_scripting, "c_func_3", NULL, NULL);
+    CHECK_FALSE(result);
 }
 
 } // anonymous namespace

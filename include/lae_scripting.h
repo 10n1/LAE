@@ -48,6 +48,12 @@ typedef struct
     } value;
 } lae_script_value_t;
 
+typedef struct
+{
+    const char* name;
+    int (*func)(struct lua_State*);
+} lae_scripting_function_t;
+
 /**
  * Allocates and initalizes a scripting interface
  */
@@ -87,6 +93,11 @@ int lae_scripting_export_function(  lae_scripting_t* scripting,
                                     const char* function_name,
                                     int (*function)(struct lua_State*));
 /**
+ * Exports a list of C functions all at once
+ */
+int lae_scripting_export_functions(lae_scripting_t* scripting, const lae_scripting_function_t* functions);
+
+/**
  * Retrieves or sets a global value from the scripting environment
  */
 lae_script_value_t lae_scripting_get_value(lae_scripting_t* scripting, const char* name);
@@ -109,10 +120,13 @@ void lae_scripting_ptr_to_lua(struct lua_State* L, void* value);
  * Helper macros to make exporting functions slightly easier
  */
 #define LAE_SCRIPTING_EXPORT_FUNCTION(func_name) \
-    static int func_name##__lua(struct lua_State* L)
+    static int _##func_name##__lua(struct lua_State* L)
     
 #define lae_scripting_export_function_named(scripting, function) \
-    lae_scripting_export_function(scripting, #function, function##__lua)
+    lae_scripting_export_function(scripting, #function, _##function##__lua)
+
+#define LAE_SCRIPTING_FUNCTION(func) \
+    { #func, _##func##__lua }
  
 #ifdef __cplusplus
 }

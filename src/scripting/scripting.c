@@ -213,7 +213,15 @@ int lae_scripting_export_function(  lae_scripting_t* scripting,
     lua_register(scripting->lua, function_name, function);
     return 0;
 }
-
+int lae_scripting_export_functions(lae_scripting_t* scripting, const lae_scripting_function_t* functions)
+{
+    while(functions && functions->name && functions->func)
+    {
+        lae_scripting_export_function(scripting, functions->name, functions->func);
+        functions++;
+    }
+    return 0;
+}
 lae_script_value_t lae_scripting_get_value(lae_scripting_t* scripting, const char* name)
 {
     lae_script_value_t ret;
