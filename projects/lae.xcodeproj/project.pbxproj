@@ -81,6 +81,7 @@
 		CD1A2447158080B8003FE80F /* test_core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_core.cpp; sourceTree = "<group>"; };
 		CD1A2449158080CA003FE80F /* lae_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_core.h; sourceTree = "<group>"; };
 		CD1A244C15808108003FE80F /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = core.c; path = core/core.c; sourceTree = "<group>"; };
+		CD1A245315808759003FE80F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
 		CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_timer.h; sourceTree = "<group>"; };
 		CD7AE2FF157F3B16009CD9D3 /* timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
 		CD9FBDAA157FD34900638766 /* lae_osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lae_osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +267,7 @@
 		CDE73E36157EA786000BE9C5 = {
 			isa = PBXGroup;
 			children = (
+				CD1A245315808759003FE80F /* readme.md */,
 				CD03F0EF157F167B0087081C /* test */,
 				CD03F0D8157F16740087081C /* include */,
 				CD03F0DF157F16740087081C /* src */,
