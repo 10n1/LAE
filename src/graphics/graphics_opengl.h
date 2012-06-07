@@ -68,6 +68,8 @@ struct lae_graphics_t
     void*  context;
     void*  pixel_format;
 #elif LAE_PLATFORM_ID == LAE_PLATFORM_WINDOWS
+    HDC     dc;
+    HGLRC   rc;
 #endif
 };
 

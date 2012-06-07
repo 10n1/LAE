@@ -83,7 +83,7 @@ double lae_timer_running_time(lae_timer_t* timer)
 
     QueryPerformanceCounter( (LARGE_INTEGER*)&current_time );
     running_time = (current_time - timer->startTime) * timer->frequency;
-    return running_time;
+    return running_time; 
 }
 #else
     #error Need a timer!

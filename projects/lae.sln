@@ -8,6 +8,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lae_test", "lae_test.vcxpro
 		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2} = {B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lae_windows", "lae_windows.vcxproj", "{AD48DA49-C00B-44F0-9982-05C5C5A69F87}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4} = {58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -24,6 +29,14 @@ Global
 		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Release|Win32.Build.0 = Release|Win32
 		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Release|x64.ActiveCfg = Release|x64
 		{58E6D3C4-C0F8-482D-9B54-18432D9BF2F4}.Release|x64.Build.0 = Release|x64
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Debug|Win32.Build.0 = Debug|Win32
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Debug|x64.ActiveCfg = Debug|x64
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Debug|x64.Build.0 = Debug|x64
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Release|Win32.ActiveCfg = Release|Win32
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Release|Win32.Build.0 = Release|Win32
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Release|x64.ActiveCfg = Release|x64
+		{AD48DA49-C00B-44F0-9982-05C5C5A69F87}.Release|x64.Build.0 = Release|x64
 		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Debug|Win32.Build.0 = Debug|Win32
 		{B4709FA9-2458-4FCE-BCAF-A56FE32F0CB2}.Debug|x64.ActiveCfg = Debug|x64

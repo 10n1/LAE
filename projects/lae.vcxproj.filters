@@ -19,6 +19,9 @@
     <Filter Include="src\utility">
       <UniqueIdentifier>{ddc41adf-d231-4af4-9ce0-21c04f268843}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\graphics">
+      <UniqueIdentifier>{2caf443d-d521-4882-b932-62102edde1eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\system\system.c">
@@ -32,6 +35,15 @@
     </ClCompile>
     <ClCompile Include="..\src\utility\timer.c">
       <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\graphics_opengl.c">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\glew-1.7.0\glew.c">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\graphics\graphics_opengl_win32.c">
+      <Filter>src\graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +66,12 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\lae_timer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\graphics\graphics_opengl.h">
+      <Filter>src\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\lae_graphics.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
