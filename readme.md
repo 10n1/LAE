@@ -1,6 +1,6 @@
 # Laeko Engine #
 
-The Laeko Engine is primarily for being awesome.
+The Laeko Engine is primarily for being awesome. It's also _very much_ a work in progress. 
 
 ## Features ##
 
