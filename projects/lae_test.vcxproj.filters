@@ -18,5 +18,8 @@
     <ClCompile Include="..\test\test_scripting.cpp">
       <Filter>test</Filter>
     </ClCompile>
+    <ClCompile Include="..\test\test_core.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
