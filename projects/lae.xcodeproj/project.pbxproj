@@ -21,6 +21,9 @@
 		CD03F0F6157F167B0087081C /* test_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03F0F2157F167B0087081C /* test_system.cpp */; };
 		CD03F0F7157F167B0087081C /* test_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03F0F3157F167B0087081C /* test_test.cpp */; };
 		CD03F0F9157F16E30087081C /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03F0F8157F16E30087081C /* liblua.a */; };
+		CD0E832F15815525006AF063 /* lae_resources.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0E832E15815525006AF063 /* lae_resources.h */; };
+		CD0E83311581552F006AF063 /* test_resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD0E83301581552F006AF063 /* test_resource_manager.cpp */; };
+		CD0E8334158155D8006AF063 /* resource_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = CD0E8333158155D8006AF063 /* resource_manager.c */; };
 		CD1A2437157FEA35003FE80F /* lae_cocoa_view.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */; };
 		CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A2439157FECE4003FE80F /* lae_graphics.h */; };
 		CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */ = {isa = PBXBuildFile; fileRef = CD1A243C157FEDA5003FE80F /* graphics_opengl.c */; };
@@ -70,6 +73,9 @@
 		CD03F0F2157F167B0087081C /* test_system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_system.cpp; sourceTree = "<group>"; };
 		CD03F0F3157F167B0087081C /* test_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_test.cpp; sourceTree = "<group>"; };
 		CD03F0F8157F16E30087081C /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "../external/lua-5.2.0/src/liblua.a"; sourceTree = "<group>"; };
+		CD0E832E15815525006AF063 /* lae_resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_resources.h; sourceTree = "<group>"; };
+		CD0E83301581552F006AF063 /* test_resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_resource_manager.cpp; sourceTree = "<group>"; };
+		CD0E8333158155D8006AF063 /* resource_manager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = resource_manager.c; path = resources/resource_manager.c; sourceTree = "<group>"; };
 		CD1A2435157FEA35003FE80F /* lae_cocoa_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_cocoa_view.h; sourceTree = "<group>"; };
 		CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lae_cocoa_view.m; sourceTree = "<group>"; };
 		CD1A2439157FECE4003FE80F /* lae_graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_graphics.h; sourceTree = "<group>"; };
@@ -136,13 +142,14 @@
 			children = (
 				CD03F0D9157F16740087081C /* lae_assert.h */,
 				CD03F0DA157F16740087081C /* lae_config.h */,
+				CD1A2449158080CA003FE80F /* lae_core.h */,
 				CD03F0DB157F16740087081C /* lae_defines.h */,
+				CD1A2439157FECE4003FE80F /* lae_graphics.h */,
 				CD03F0DC157F16740087081C /* lae_scripting.h */,
 				CD03F0DD157F16740087081C /* lae_system.h */,
 				CD03F0DE157F16740087081C /* lae_test.h */,
 				CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */,
-				CD1A2439157FECE4003FE80F /* lae_graphics.h */,
-				CD1A2449158080CA003FE80F /* lae_core.h */,
+				CD0E832E15815525006AF063 /* lae_resources.h */,
 			);
 			name = include;
 			path = ../include;
@@ -151,13 +158,14 @@
 		CD03F0DF157F16740087081C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CD0E8332158155C0006AF063 /* resources */,
 				CD1A244B158080FC003FE80F /* core */,
 				CD1A243B157FED97003FE80F /* graphics */,
 				CD9FBDC9157FD35800638766 /* macosx */,
-				CD7AE2FE157F3B0C009CD9D3 /* utility */,
 				CD03F0E0157F16740087081C /* scripting */,
 				CD03F0E2157F16740087081C /* system */,
 				CD03F0E4157F16740087081C /* test */,
+				CD7AE2FE157F3B0C009CD9D3 /* utility */,
 			);
 			name = src;
 			path = ../src;
@@ -190,14 +198,23 @@
 		CD03F0EF157F167B0087081C /* test */ = {
 			isa = PBXGroup;
 			children = (
-				CD1A2447158080B8003FE80F /* test_core.cpp */,
 				CD03F0F0157F167B0087081C /* main.c */,
+				CD1A2447158080B8003FE80F /* test_core.cpp */,
 				CD03F0F1157F167B0087081C /* test_scripting.cpp */,
 				CD03F0F2157F167B0087081C /* test_system.cpp */,
 				CD03F0F3157F167B0087081C /* test_test.cpp */,
+				CD0E83301581552F006AF063 /* test_resource_manager.cpp */,
 			);
 			name = test;
 			path = ../test;
+			sourceTree = "<group>";
+		};
+		CD0E8332158155C0006AF063 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD0E8333158155D8006AF063 /* resource_manager.c */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 		CD1A243B157FED97003FE80F /* graphics */ = {
@@ -255,11 +272,11 @@
 				CD9FBDCB157FD35800638766 /* AppDelegate.m */,
 				CD9FBDCC157FD35800638766 /* Credits.rtf */,
 				CD9FBDCE157FD35800638766 /* InfoPlist.strings */,
-				CD9FBDD0157FD35800638766 /* MainMenu.xib */,
-				CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */,
-				CD9FBDD3157FD35800638766 /* main.m */,
 				CD1A2435157FEA35003FE80F /* lae_cocoa_view.h */,
 				CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */,
+				CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */,
+				CD9FBDD3157FD35800638766 /* main.m */,
+				CD9FBDD0157FD35800638766 /* MainMenu.xib */,
 			);
 			path = macosx;
 			sourceTree = "<group>";
@@ -268,11 +285,11 @@
 			isa = PBXGroup;
 			children = (
 				CD1A245315808759003FE80F /* readme.md */,
-				CD03F0EF157F167B0087081C /* test */,
 				CD03F0D8157F16740087081C /* include */,
 				CD03F0DF157F16740087081C /* src */,
-				CD9FBDAC157FD34900638766 /* Frameworks */,
+				CD03F0EF157F167B0087081C /* test */,
 				CDE73E42157EA786000BE9C5 /* Products */,
+				CD9FBDAC157FD34900638766 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,6 +320,7 @@
 				CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */,
 				CD1A2440157FF8D7003FE80F /* graphics_opengl.h in Headers */,
 				CD1A244A158080CA003FE80F /* lae_core.h in Headers */,
+				CD0E832F15815525006AF063 /* lae_resources.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +457,8 @@
 				CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */,
 				CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */,
 				CD1A244D15808108003FE80F /* core.c in Sources */,
+				CD0E83311581552F006AF063 /* test_resource_manager.cpp in Sources */,
+				CD0E8334158155D8006AF063 /* resource_manager.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

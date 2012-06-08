@@ -48,14 +48,17 @@ static CVReturn display_link_callback(  CVDisplayLinkRef displayLink,
 {
     CGLContextObj       cgl_context         = NULL;
     CGLPixelFormatObj   cgl_pixel_format    = NULL;
-    NSView*             view                = NULL;
+    lae_cocoa_view_t*   view                = NULL;
 
     /* Insert code here to initialize your application */
     view = [[lae_cocoa_view_t alloc] init];
     [_window setContentView:view];
-    [view release];
     
     graphics = lae_graphics_create(_window);
+    [view setGraphics:graphics];
+    
+    [view release];
+    
     
     /* Set up display link */
     CVDisplayLinkCreateWithActiveCGDisplays(&display_link);

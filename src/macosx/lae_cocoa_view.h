@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+struct lae_graphics_t;
+
 @interface lae_cocoa_view_t : NSView
+
+@property struct lae_graphics_t* graphics;
 
 @end
