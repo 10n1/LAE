@@ -16,7 +16,7 @@
 #elif defined( __GNUC__ )
     #define debugBreak() __asm__( "int $3\n" : : )
 #else
-    #error Unsupported compiler
+    #error Unsupported compiler, need a debug break
 #endif
 
 /*

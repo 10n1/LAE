@@ -22,7 +22,6 @@
 		CD03F0F7157F167B0087081C /* test_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03F0F3157F167B0087081C /* test_test.cpp */; };
 		CD03F0F9157F16E30087081C /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD03F0F8157F16E30087081C /* liblua.a */; };
 		CD0E832F15815525006AF063 /* lae_resources.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0E832E15815525006AF063 /* lae_resources.h */; };
-		CD0E83311581552F006AF063 /* test_resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD0E83301581552F006AF063 /* test_resource_manager.cpp */; };
 		CD0E8334158155D8006AF063 /* resource_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = CD0E8333158155D8006AF063 /* resource_manager.c */; };
 		CD1A2437157FEA35003FE80F /* lae_cocoa_view.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2436157FEA35003FE80F /* lae_cocoa_view.m */; };
 		CD1A243A157FECE4003FE80F /* lae_graphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A2439157FECE4003FE80F /* lae_graphics.h */; };
@@ -35,6 +34,8 @@
 		CD1A2448158080B8003FE80F /* test_core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD1A2447158080B8003FE80F /* test_core.cpp */; };
 		CD1A244A158080CA003FE80F /* lae_core.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A2449158080CA003FE80F /* lae_core.h */; };
 		CD1A244D15808108003FE80F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = CD1A244C15808108003FE80F /* core.c */; };
+		CD21FA401589123000004522 /* world.c in Sources */ = {isa = PBXBuildFile; fileRef = CD21FA3F1589123000004522 /* world.c */; };
+		CD23330415890FE80066A481 /* test_resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD0E83301581552F006AF063 /* test_resource_manager.cpp */; };
 		CD7AE2FC157F3AB7009CD9D3 /* lae_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */; };
 		CD7AE300157F3B16009CD9D3 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD7AE2FF157F3B16009CD9D3 /* timer.c */; };
 		CD9FBDAE157FD34900638766 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9FBDAD157FD34900638766 /* Cocoa.framework */; };
@@ -43,6 +44,8 @@
 		CD9FBDD6157FD35800638766 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD9FBDCE157FD35800638766 /* InfoPlist.strings */; };
 		CD9FBDD7157FD35800638766 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9FBDD0157FD35800638766 /* MainMenu.xib */; };
 		CD9FBDD9157FD35800638766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FBDD3157FD35800638766 /* main.m */; };
+		CDA0ADBC158910BA0098DA8B /* test_world.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDA0ADBB158910BA0098DA8B /* test_world.cpp */; };
+		CDA0ADBF158911080098DA8B /* lae_world.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA0ADBE158911080098DA8B /* lae_world.h */; };
 		CDE73E70157EA91F000BE9C5 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE73E57157EA81D000BE9C5 /* liblae.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,7 @@
 		CD1A2449158080CA003FE80F /* lae_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_core.h; sourceTree = "<group>"; };
 		CD1A244C15808108003FE80F /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = core.c; path = core/core.c; sourceTree = "<group>"; };
 		CD1A245315808759003FE80F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
+		CD21FA3F1589123000004522 /* world.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = world.c; sourceTree = "<group>"; };
 		CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_timer.h; sourceTree = "<group>"; };
 		CD7AE2FF157F3B16009CD9D3 /* timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
 		CD9FBDAA157FD34900638766 /* lae_osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lae_osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 		CD9FBDD1157FD35800638766 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CD9FBDD2157FD35800638766 /* lae_osx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "lae_osx-Info.plist"; sourceTree = "<group>"; };
 		CD9FBDD3157FD35800638766 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDA0ADBB158910BA0098DA8B /* test_world.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_world.cpp; sourceTree = "<group>"; };
+		CDA0ADBE158911080098DA8B /* lae_world.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_world.h; sourceTree = "<group>"; };
 		CDE73E57157EA81D000BE9C5 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE73E5F157EA82C000BE9C5 /* lae_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lae_test; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +156,7 @@
 				CD03F0DE157F16740087081C /* lae_test.h */,
 				CD7AE2FB157F3AB7009CD9D3 /* lae_timer.h */,
 				CD0E832E15815525006AF063 /* lae_resources.h */,
+				CDA0ADBE158911080098DA8B /* lae_world.h */,
 			);
 			name = include;
 			path = ../include;
@@ -158,6 +165,7 @@
 		CD03F0DF157F16740087081C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CD21FA3D1589122800004522 /* world */,
 				CD0E8332158155C0006AF063 /* resources */,
 				CD1A244B158080FC003FE80F /* core */,
 				CD1A243B157FED97003FE80F /* graphics */,
@@ -204,6 +212,7 @@
 				CD03F0F2157F167B0087081C /* test_system.cpp */,
 				CD03F0F3157F167B0087081C /* test_test.cpp */,
 				CD0E83301581552F006AF063 /* test_resource_manager.cpp */,
+				CDA0ADBB158910BA0098DA8B /* test_world.cpp */,
 			);
 			name = test;
 			path = ../test;
@@ -233,6 +242,14 @@
 				CD1A244C15808108003FE80F /* core.c */,
 			);
 			name = core;
+			sourceTree = "<group>";
+		};
+		CD21FA3D1589122800004522 /* world */ = {
+			isa = PBXGroup;
+			children = (
+				CD21FA3F1589123000004522 /* world.c */,
+			);
+			path = world;
 			sourceTree = "<group>";
 		};
 		CD7AE2FE157F3B0C009CD9D3 /* utility */ = {
@@ -321,6 +338,7 @@
 				CD1A2440157FF8D7003FE80F /* graphics_opengl.h in Headers */,
 				CD1A244A158080CA003FE80F /* lae_core.h in Headers */,
 				CD0E832F15815525006AF063 /* lae_resources.h in Headers */,
+				CDA0ADBF158911080098DA8B /* lae_world.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,8 +475,8 @@
 				CD1A243D157FEDA5003FE80F /* graphics_opengl.c in Sources */,
 				CD1A2442157FFD53003FE80F /* graphics_opengl_macosx.m in Sources */,
 				CD1A244D15808108003FE80F /* core.c in Sources */,
-				CD0E83311581552F006AF063 /* test_resource_manager.cpp in Sources */,
 				CD0E8334158155D8006AF063 /* resource_manager.c in Sources */,
+				CD21FA401589123000004522 /* world.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,11 +484,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD23330415890FE80066A481 /* test_resource_manager.cpp in Sources */,
 				CD03F0F4157F167B0087081C /* main.c in Sources */,
 				CD03F0F5157F167B0087081C /* test_scripting.cpp in Sources */,
 				CD03F0F6157F167B0087081C /* test_system.cpp in Sources */,
 				CD03F0F7157F167B0087081C /* test_test.cpp in Sources */,
 				CD1A2448158080B8003FE80F /* test_core.cpp in Sources */,
+				CDA0ADBC158910BA0098DA8B /* test_world.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
